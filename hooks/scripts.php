@@ -10,6 +10,8 @@
 
 class RegisterScripts
 {
+    public $detailPageUrl;
+    public $pluginOptions;
 
     public function __construct()
     {
@@ -18,6 +20,16 @@ class RegisterScripts
         // add_filter('rewrite_rules_array', [$this, 'insert_rewrite_rules']);
         add_filter('query_vars', [$this, 'insert_query_vars']);
         add_action('wp_head', [$this, 'pw_global_js_vars'] );
+
+        $pluginDefaults = array(
+            'mpvc_field_api_version' => '2',
+            'mpvc_field_api_url' => 'api.milenioplus.com'
+        );
+        $this->pluginOptions = wp_parse_args(get_option( 'mpvc_settings' ), $pluginDefaults);
+
+        if ($options['page_id']>0) {
+            $this->detailPageUrl = get_permalink( $this->pluginOptions['page_id'] );
+        }
         // add_action('wp_loaded', [$this, 'flush_rules']);
     }
 
@@ -26,7 +38,11 @@ class RegisterScripts
      */
     public function register_plugin_styles()
     {
+        // <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
         wp_register_style('mpvc-styles', plugins_url('milenio-vue-cli/dist/css/theme.css'), [], MPVC_VERSION);
+        // wp_register_style('mpvc-elements', 'https://unpkg.com/element-ui@2.0.8/lib/theme-chalk/index.css', [], MPVC_VERSION);
+        wp_register_script('mpvc-manifest', plugins_url('milenio-vue-cli/dist/js/manifest.js'), [], MPVC_VERSION);
+        wp_register_script('mpvc-vendors', plugins_url('milenio-vue-cli/dist/js/vendor.js'), [], MPVC_VERSION);
         wp_register_script('mpvc-scripts', plugins_url('milenio-vue-cli/dist/js/main.js'), [], MPVC_VERSION, true);
     }
 
@@ -63,9 +79,17 @@ class RegisterScripts
     }
 
     public function pw_global_js_vars() {
+        $options = get_option( 'mpvc_settings' );
+
+        $settings = array(
+            'pluginUrl' => MPVC_BASE_URL,
+            'gatewayUrl' => MPVC_PROXY_URL,
+            'detailPageId' => $options[page_id]
+        );
+
     	echo '<script type="text/javascript">
     	/* <![CDATA[ */
-    	var MPVC = {"gatewayUrl":"'.MPVC_PROXY_URL.'"};
+    	window.MPVC = '.json_encode($settings).';
     	/* ]]> */
     	</script>';
     }
@@ -73,16 +97,13 @@ class RegisterScripts
 
 }
 
-new RegisterScripts();
+$mpvc_scripts = new RegisterScripts();
 
-
-function custom_rewrite_basic() {
-  add_rewrite_rule('^property-details/([^/]*)/?', 'property-details/?propertyId=$matches[1]', 'top');
+/* Plugin helper function */
+if (!function_exists('getMpvcOptions'))
+{
+    function getMpvcOptions($key){
+        global $mpvc_scripts;
+        return array_key_exists($key, $mpvc_scripts->pluginOptions) ? $mpvc_scripts->pluginOptions[$key] : null;
+    }
 }
-add_action('init', 'custom_rewrite_basic', 10, 0);
-
-// flush_rules() if our rules are not yet included
-
-// Adding a new rule
-
-// Adding the id var so that WP recognizes it

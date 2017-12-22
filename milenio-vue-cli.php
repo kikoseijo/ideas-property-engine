@@ -5,16 +5,16 @@
  * Description:     Plugin for BlueChillyHomes accesing milenio properties
  * Author:          Kiko Seijo
  * Author URI:      http://sunnyface.com
- * Text Domain:     milenio-vue-cli
+ * Text Domain:     mpvc
  * Domain Path:     /languages
  * Version:         0.1.0
  *
- * @package         Milenio_Vue_Cli
+ * @package         milenio_plus_vue_client
  */
 
-
-define('MPVC_VERSION', '0.1.4');
-define('MPVC_PROXY_URL', plugins_url( 'proxi.php',  __FILE__));
+define('MPVC_VERSION', '0.1.16');
+define('MPVC_BASE_URL', plugin_dir_url( __FILE__));
+define('MPVC_PROXY_URL', MPVC_BASE_URL . 'proxi.php');
 
  function mpvc_setup() {
 
@@ -32,7 +32,11 @@ function mpvc_deactivation() {
 //register_deactivation_hook( __FILE__, 'mpvc_deactivation' );
 register_uninstall_hook(__FILE__, 'mpvc_deactivation');
 
-require __DIR__ . '/hooks/scripts.php';
-require __DIR__ . '/hooks/admin_menu.php';
+function custom_rewrite_basic() {
+  add_rewrite_rule('^property-details/([^/]*)/?', 'property-details/?propertyId=$matches[1]', 'top');
+}
+// add_action('init', 'custom_rewrite_basic', 10, 0);
+
+require __DIR__ . '/hooks/scripts.php';  // Must be the first... options are loaded from here.
 require __DIR__ . '/hooks/settings.php';
 require __DIR__ . '/hooks/shortcodes.php';

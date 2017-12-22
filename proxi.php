@@ -1,10 +1,15 @@
 <?php
 
-error_reporting(E_ALL & ~E_NOTICE);
+// error_reporting(E_ALL & ~E_NOTICE);
 
-$http_basic_user     = '509API';
-$http_basic_password = 'ce156d2106d48769';
-$http_host_path      = 'api.milenioplus.com/v2/' . $_REQUEST['path'];
+define( 'WP_USE_THEMES', false );
+require_once '../../../wp-load.php';
+
+$options = get_option( 'mpvc_settings' );
+
+$http_basic_user     = $options['mpvc_field_api_user'];
+$http_basic_password = $options['mpvc_field_api_pass'];
+$http_host_path      = $options['mpvc_field_api_url'] .'/v'.$options['mpvc_field_api_version'].'/' . $_REQUEST['path'];
 $http_scheme         = 'https';
 
 if (!($http_basic_user && $http_basic_password && $http_host_path)) {
