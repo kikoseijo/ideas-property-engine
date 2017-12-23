@@ -1,0 +1,28 @@
+<?php
+
+$transArray = array(
+    'propertyTitle' => __('%property_type% in %city% %sale_type%', 'mpvc'),
+    'resultsResume' => __('Viewing <strong>%viewing%</strong> properties, out of <strong>%total%</strong> properties found.', 'mpvc'),
+    'highSeasson' => __('High', 'mpvc'),
+    'lowSeasson' => __('Low', 'mpvc'),
+    'forSale' => __('for sale', 'mpvc'),
+    'forRent' => __('for rent', 'mpvc'),
+    'symbol' => __('€', 'mpvc'),
+    'titleListingTypes' => __('Listing type', 'mpvc'),
+    'placeholderListingTypes' => __('Select type', 'mpvc'),
+    'titlePropertyType' => __('Property type', 'mpvc'),
+    'placeholderPropertyType' => __('Select property type', 'mpvc'),
+    'nBeds' => __('N. Bedrooms', 'mpvc'),
+    'nBaths' => __('N. Bathrooms', 'mpvc'),
+    'plotSize' => __('Plot size', 'mpvc'),
+    'titlePropDescs' => __('Property descriptions', 'mpvc'),
+    'titlePropDesc' => __('Property description', 'mpvc'),
+    'titlePropertyFeatures' => __('Property features', 'mpvc'),
+    'sortBy' => __('Sort by', 'mpvc'),
+    'loadMoreButton' => __('Load more properties', 'mpvc'),
+    'loadingPropertiesText' => __('Updating to the latest properties, please wait....', 'mpvc'),
+    'loadingPropertyText' => __('Loading property details, please wait....', 'mpvc'),
+    'propertyDetailErrorTitle' => __('Property ID error', 'mpvc'),
+    'propertyDetailErrorText' => __('Sorry this property could have been deleted, contact us if you think this is an error.', 'mpvc'),
+    // 'xxxxxxx' => __('xxxxxxxx', 'mpvc'),
+);

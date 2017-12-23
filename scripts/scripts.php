@@ -22,7 +22,10 @@ class RegisterScripts
         add_action('wp_head', [$this, 'pw_global_js_vars'] );
 
         $pluginDefaults = array(
+            'province' => 'MA',
             'mpvc_field_api_version' => '2',
+            'page_limit' => '9',
+            'items_per_row' => '3',
             'mpvc_field_api_url' => 'api.milenioplus.com'
         );
         $this->pluginOptions = wp_parse_args(get_option( 'mpvc_settings' ), $pluginDefaults);
@@ -79,12 +82,26 @@ class RegisterScripts
     }
 
     public function pw_global_js_vars() {
-        $options = get_option( 'mpvc_settings' );
+      global $filterTypes, $sortTypes, $propertyTypesResidential, $transArray,
+              $propertyTypesComercial, $orientationArr, $langArr,
+              $featuresArr, $provincesArr, $langsArray;
 
         $settings = array(
             'pluginUrl' => MPVC_BASE_URL,
             'gatewayUrl' => MPVC_PROXY_URL,
-            'detailPageId' => $options[page_id]
+            'detailPageId' => $this->pluginOptions['page_id'],
+            'searchProvince' => $this->pluginOptions['province'],
+            'itemsPerRow' => $this->pluginOptions['items_per_row'],
+            'pageLimit' => $this->pluginOptions['page_limit'],
+            'filterTypes' => $filterTypes,
+            'sortTypes' => $sortTypes,
+            'residential' => $propertyTypesResidential,
+            'comercial' => $propertyTypesComercial,
+            'orientations' => $orientationArr,
+            'langs' => $langsArray,
+            'features' => $featuresArr,
+            'provinces' => $provincesArr,
+            'trans' => $transArray,
         );
 
     	echo '<script type="text/javascript">

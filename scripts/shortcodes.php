@@ -10,6 +10,7 @@ function mpvc_listing($atts = [], $content = null, $tag = '')
 
     $atts = array_change_key_case((array)$atts, CASE_LOWER);
     $mpvc_atts = shortcode_atts([
+        'lang' => 'en',
         'tint_color' => '#074997',
         'h_search_color' => '#f9f9f9',
         'img_width' => '100%',
@@ -27,6 +28,7 @@ function mpvc_listing($atts = [], $content = null, $tag = '')
     $o .= '<filters-horizontal tint-color="'.$mpvc_atts['tint_color'].'" bg-color="'.$mpvc_atts['h_search_color'].'"></filters-horizontal>';
     $o .= '<search-filters tint-color="'.$mpvc_atts['tint_color'].'" bg-color="'.$mpvc_atts['h_search_color'].'"></search-filters>';
     $o .= '<property-listing-loadmore';
+    $o .= ' lang="'.$mpvc_atts['lang'].'"';
     $o .= ' tint-color="'.$mpvc_atts['tint_color'].'"';
     $o .= ' i-height="'.$mpvc_atts['img_height'].'"';
     $o .= ' i-width="'.$mpvc_atts['img_width'].'"';

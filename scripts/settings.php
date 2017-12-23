@@ -71,9 +71,17 @@ function mpvc_settings_init(  ) {
 	);
 
 	add_settings_field(
-		'listing_page_records_number',
+		'items_per_row',
+		__( 'Properties per row', 'mpvc' ),
+		'mpvc_items_per_row_render',
+		'pluginPage',
+		'mpvc_pluginPageSettings_section'
+	);
+
+	add_settings_field(
+		'page_limit',
 		__( 'Properties per page', 'mpvc' ),
-		'mpvc_listing_page_records_number_render',
+		'mpvc_page_limit_render',
 		'pluginPage',
 		'mpvc_pluginPageSettings_section'
 	);
@@ -134,12 +142,22 @@ function mpvc_field_settings_detail_render()
 	<?php
 }
 
-function mpvc_listing_page_records_number_render()
+function mpvc_page_limit_render()
 {
 	?>
-	<input type='number' name='mpvc_settings[listing_page_records_number]' value='<?php echo getMpvcOptions('listing_page_records_number'); ?>'>
+	<input type='number' name='mpvc_settings[page_limit]' value='<?php echo getMpvcOptions('page_limit'); ?>'>
 	<p class="description">
 		Max number its limited to 20 records per page.<br />
+	</p>
+	<?php
+}
+
+function mpvc_items_per_row_render()
+{
+	?>
+	<input type='number' name='mpvc_settings[items_per_row]' value='<?php echo getMpvcOptions('items_per_row'); ?>' min="2" max="6">
+	<p class="description">
+		How many properties will show in the listing page. ej: "2", "3", "4".<br />
 	</p>
 	<?php
 }

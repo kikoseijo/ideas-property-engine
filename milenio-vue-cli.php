@@ -37,6 +37,8 @@ function custom_rewrite_basic() {
 }
 // add_action('init', 'custom_rewrite_basic', 10, 0);
 
-require __DIR__ . '/hooks/scripts.php';  // Must be the first... options are loaded from here.
-require __DIR__ . '/hooks/settings.php';
-require __DIR__ . '/hooks/shortcodes.php';
+require __DIR__ . '/vars/langs.php';  // Must be the first... options are loaded from here.
+require __DIR__ . '/vars/milenio.php';  // Must be the first... options are loaded from here.
+require __DIR__ . '/scripts/scripts.php';  // Must be the first... options are loaded from here.
+require __DIR__ . '/scripts/settings.php';
+require __DIR__ . '/scripts/shortcodes.php';
