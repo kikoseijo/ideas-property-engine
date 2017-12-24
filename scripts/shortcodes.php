@@ -5,31 +5,30 @@ function mpvc_listing($atts = [], $content = null, $tag = '')
     // Property details page
     $pageId = getMpvcOptions( 'page_id' );
     if (!($pageId>0)) {
-      return 'MPVC - ERROR: You must configure detail page id in the plugin settins, you can find the settings in Wordpress control panel, Settings > MPVC Settings > Property details page';
+      echo __('HIPE - ERROR:<br />The plugin its not configured right, the <b>detail page ID</b> its not setup.<br />Enter your Wordpress control panel, go to <b>Settings > HIPE Agent > Configure search</b>.<br />Configure there where to send users when they want to see the property details page.', IPE_KEY);
+      return;
     }
 
     $atts = array_change_key_case((array)$atts, CASE_LOWER);
     $mpvc_atts = shortcode_atts([
-        'lang' => 'en',
-        'tint_color' => '#074997',
-        'h_search_color' => '#f9f9f9',
+        'color' => getMpvcOptions( 'primary_color' ),
+        'bg_color' => getMpvcOptions( 'box_bg_color' ),
         'img_width' => '100%',
         'img_height' => '300px',
         'detail_page' => get_permalink( $pageId ),
     ], $atts, $tag);
 
-    wp_enqueue_script('mpvc-manifest');
-    wp_enqueue_script('mpvc-vendors');
-    wp_enqueue_script('mpvc-scripts');
-    wp_enqueue_style('mpvc-styles');
-    // wp_enqueue_style('mpvc-elements');
+    wp_enqueue_script(IPE_KEY .'-manifest');
+    wp_enqueue_script(IPE_KEY .'-vendors');
+    wp_enqueue_script(IPE_KEY .'-scripts');
+    wp_enqueue_style(IPE_KEY .'-styles');
+    // wp_enqueue_style(IPE_KEY .'-elements');
 
     $o = '<div id="mpvc-app">';
-    $o .= '<filters-horizontal tint-color="'.$mpvc_atts['tint_color'].'" bg-color="'.$mpvc_atts['h_search_color'].'"></filters-horizontal>';
-    $o .= '<search-filters tint-color="'.$mpvc_atts['tint_color'].'" bg-color="'.$mpvc_atts['h_search_color'].'"></search-filters>';
+    $o .= '<filters-horizontal tint-color="'.$mpvc_atts['color'].'" bg-color="'.$mpvc_atts['bg_color'].'"></filters-horizontal>';
+    $o .= '<search-filters tint-color="'.$mpvc_atts['color'].'" bg-color="'.$mpvc_atts['bg_color'].'"></search-filters>';
     $o .= '<property-listing-loadmore';
-    $o .= ' lang="'.$mpvc_atts['lang'].'"';
-    $o .= ' tint-color="'.$mpvc_atts['tint_color'].'"';
+    $o .= ' tint-color="'.$mpvc_atts['color'].'"';
     $o .= ' i-height="'.$mpvc_atts['img_height'].'"';
     $o .= ' i-width="'.$mpvc_atts['img_width'].'"';
     $o .= ' detail-url="'.$mpvc_atts['detail_page'].'"';
@@ -42,14 +41,14 @@ function mpvc_detail($atts = [], $content = null, $tag = '')
 {
     $atts = array_change_key_case((array)$atts, CASE_LOWER);
     $mpvc_atts = shortcode_atts([
-        'tint_color' => '#074997',
+        'color' => getMpvcOptions( 'primary_color' ),
         'slider_height' => '500px',
     ], $atts, $tag);
 
-    wp_enqueue_script('mpvc-manifest');
-    wp_enqueue_script('mpvc-vendors');
-    wp_enqueue_script('mpvc-scripts');
-    wp_enqueue_style('mpvc-styles');
+    wp_enqueue_script(IPE_KEY .'-manifest');
+    wp_enqueue_script(IPE_KEY .'-vendors');
+    wp_enqueue_script(IPE_KEY .'-scripts');
+    wp_enqueue_style(IPE_KEY .'-styles');
 
     $o = '<div id="mpvc-app">';
     $o .= '<property-details';

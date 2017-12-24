@@ -4,8 +4,8 @@
  * Usage
  *
  * Dentro del shortcode
- * wp_enqueue_script( 'mpvc-script' );
- * wp_enqueue_style( 'mpvc-style' );
+ * wp_enqueue_script( IPE_KEY .'-script' );
+ * wp_enqueue_style( IPE_KEY .'-style' );
  */
 
 class RegisterScripts
@@ -16,24 +16,29 @@ class RegisterScripts
     public function __construct()
     {
         add_action('wp_enqueue_scripts', [$this, 'register_plugin_styles']);
-
-        // add_filter('rewrite_rules_array', [$this, 'insert_rewrite_rules']);
+        add_action('admin_enqueue_scripts', [$this, 'register_plugin_styles']);
         add_filter('query_vars', [$this, 'insert_query_vars']);
-        add_action('wp_head', [$this, 'pw_global_js_vars'] );
+
+        $apiOptions = get_option( 'mpvc_config_api', []);
+        $styleOptions = get_option( 'mpvc_config_style', []) ;
+        $listingOptions = get_option( 'mpvc_config_listing', []);
+
+        $base_options = array_merge($apiOptions, $styleOptions, $listingOptions);
 
         $pluginDefaults = array(
             'province' => 'MA',
             'mpvc_field_api_version' => '2',
             'page_limit' => '9',
             'items_per_row' => '3',
+            'primary_color' => '#074997',
+            'box_bg_color' => '#f9f9f9',
             'mpvc_field_api_url' => 'api.milenioplus.com'
         );
-        $this->pluginOptions = wp_parse_args(get_option( 'mpvc_settings' ), $pluginDefaults);
+        $this->pluginOptions = wp_parse_args($base_options, $pluginDefaults);
 
         if ($options['page_id']>0) {
             $this->detailPageUrl = get_permalink( $this->pluginOptions['page_id'] );
         }
-        // add_action('wp_loaded', [$this, 'flush_rules']);
     }
 
     /**
@@ -41,54 +46,32 @@ class RegisterScripts
      */
     public function register_plugin_styles()
     {
-        // <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
-        wp_register_style('mpvc-styles', plugins_url('milenio-vue-cli/dist/css/theme.css'), [], MPVC_VERSION);
-        // wp_register_style('mpvc-elements', 'https://unpkg.com/element-ui@2.0.8/lib/theme-chalk/index.css', [], MPVC_VERSION);
-        wp_register_script('mpvc-manifest', plugins_url('milenio-vue-cli/dist/js/manifest.js'), [], MPVC_VERSION);
-        wp_register_script('mpvc-vendors', plugins_url('milenio-vue-cli/dist/js/vendor.js'), [], MPVC_VERSION);
-        wp_register_script('mpvc-scripts', plugins_url('milenio-vue-cli/dist/js/main.js'), [], MPVC_VERSION, true);
-    }
+        wp_register_style(IPE_KEY .'-styles', plugins_url(IPE_KEY .'/dist/css/theme.css'), [], IPE_VERSION);
+        wp_register_script(IPE_KEY .'-manifest', plugins_url(IPE_KEY .'/dist/js/manifest.js'), [], IPE_VERSION, true);
+        wp_register_script(IPE_KEY .'-vendors', plugins_url(IPE_KEY .'/dist/js/vendor.js'), [], IPE_VERSION, true);
+        wp_register_script(IPE_KEY .'-scripts', plugins_url(IPE_KEY .'/dist/js/main.js'), [], IPE_VERSION, true);
+        wp_localize_script(IPE_KEY .'-scripts', 'HIPE', $this->pluginJsArrayData() );
 
-    /**
-     * @param $rules
-     * @return mixed
-     */
-    public function insert_rewrite_rules($rules)
-    {
-        $newrules = [];
-        // RewriteRule ^property-details/(.*)?/$ property-details/?propertyId=$1
-        $newrules['property-details/(\d*)$'] = 'property-details/?propertyId=$1';
-        return $newrules + $rules;
-    }
-
-    public function flush_rules()
-    {
-        $rules = get_option('rewrite_rules');
-
-        if (!isset($rules['property-details/(\d*)$'])) {
-            global $wp_rewrite;
-            $wp_rewrite->flush_rules();
+        if( is_admin() ) {
+            wp_enqueue_style( 'wp-color-picker' );
+            wp_enqueue_script(IPE_KEY .'-admin-scripts', plugins_url(IPE_KEY .'/admin/js-mpvc.js'), ['wp-color-picker'], false, true);
         }
     }
 
-    /**
-     * @param $vars
-     * @return mixed
-     */
     public function insert_query_vars($vars)
     {
         array_push($vars, 'propertyId');
         return $vars;
     }
 
-    public function pw_global_js_vars() {
+    public function pluginJsArrayData() {
       global $filterTypes, $sortTypes, $propertyTypesResidential, $transArray,
               $propertyTypesComercial, $orientationArr, $langArr,
               $featuresArr, $provincesArr, $langsArray;
 
-        $settings = array(
-            'pluginUrl' => MPVC_BASE_URL,
-            'gatewayUrl' => MPVC_PROXY_URL,
+        return array(
+            'pluginUrl' => IPE_BASE_URL,
+            'gatewayUrl' => IPE_PROXY_URL,
             'detailPageId' => $this->pluginOptions['page_id'],
             'searchProvince' => $this->pluginOptions['province'],
             'itemsPerRow' => $this->pluginOptions['items_per_row'],
@@ -102,13 +85,19 @@ class RegisterScripts
             'features' => $featuresArr,
             'provinces' => $provincesArr,
             'trans' => $transArray,
+            'styles' => array(
+                'primaryColor' => $this->pluginOptions['primary_color'],
+                'boxBgColor' => $this->pluginOptions['box_bg_color'],
+            ),
         );
-
-    	echo '<script type="text/javascript">
-    	/* <![CDATA[ */
-    	window.MPVC = '.json_encode($settings).';
-    	/* ]]> */
-    	</script>';
+        //
+        // return $settings;
+        //
+    	// echo '<script type="text/javascript">
+    	// /* <![CDATA[ */
+    	// window.HIPE = '.json_encode($settings).';
+    	// /* ]]> */
+    	// </script>';
     }
 
 
