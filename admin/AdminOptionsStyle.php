@@ -89,12 +89,14 @@ class AdminOptionsStyle
     {
         $new_input = array();
 
-        if( isset( $input['page_limit'] ) )
-            $new_input['page_limit'] = absint( $input['page_limit'] );
-        if( isset( $input['items_per_row'] ) )
-            $new_input['items_per_row'] = absint( $input['items_per_row'] );
-        if( isset( $input['page_id'] ) )
-            $new_input['page_id'] = absint( $input['page_id'] );
+        if( isset( $input['primary_color'] ) )
+                $new_input['primary_color'] = sanitize_text_field( $input['primary_color'] );
+        if( isset( $input['box_bg_color'] ) )
+                $new_input['box_bg_color'] = sanitize_text_field( $input['box_bg_color'] );
+        // if( isset( $input['items_per_row'] ) )
+        //     $new_input['items_per_row'] = absint( $input['items_per_row'] );
+        // if( isset( $input['page_id'] ) )
+        //     $new_input['page_id'] = absint( $input['page_id'] );
 
         return $new_input;
     }

@@ -26,13 +26,14 @@ class RegisterScripts
         $base_options = array_merge($apiOptions, $styleOptions, $listingOptions);
 
         $pluginDefaults = array(
-            'province' => 'MA',
-            'mpvc_field_api_version' => '2',
+            'search_provinces' => 'MA',
+            'api_version' => '2',
             'page_limit' => '9',
+            'with_shared' => true,
             'items_per_row' => '3',
             'primary_color' => '#074997',
             'box_bg_color' => '#f9f9f9',
-            'mpvc_field_api_url' => 'api.milenioplus.com'
+            'api_url' => 'api.milenioplus.com'
         );
         $this->pluginOptions = wp_parse_args($base_options, $pluginDefaults);
 
@@ -64,7 +65,9 @@ class RegisterScripts
         return $vars;
     }
 
-    public function pluginJsArrayData() {
+    public function pluginJsArrayData()
+    {
+
       global $filterTypes, $sortTypes, $propertyTypesResidential, $transArray,
               $propertyTypesComercial, $orientationArr, $langArr,
               $featuresArr, $provincesArr, $langsArray;
@@ -72,10 +75,17 @@ class RegisterScripts
         return array(
             'pluginUrl' => IPE_BASE_URL,
             'gatewayUrl' => IPE_PROXY_URL,
+            // Settings options
+            'searchProvinces' => $this->pluginOptions['search_provinces'],
+            'withShared' => $this->pluginOptions['with_shared'],
             'detailPageId' => $this->pluginOptions['page_id'],
-            'searchProvince' => $this->pluginOptions['province'],
             'itemsPerRow' => $this->pluginOptions['items_per_row'],
             'pageLimit' => $this->pluginOptions['page_limit'],
+            'styles' => array(
+                'primaryColor' => $this->pluginOptions['primary_color'],
+                'boxBgColor' => $this->pluginOptions['box_bg_color'],
+            ),
+            // Types & Scripts localization
             'filterTypes' => $filterTypes,
             'sortTypes' => $sortTypes,
             'residential' => $propertyTypesResidential,
@@ -84,23 +94,10 @@ class RegisterScripts
             'langs' => $langsArray,
             'features' => $featuresArr,
             'provinces' => $provincesArr,
+            // Translations UI strings
             'trans' => $transArray,
-            'styles' => array(
-                'primaryColor' => $this->pluginOptions['primary_color'],
-                'boxBgColor' => $this->pluginOptions['box_bg_color'],
-            ),
         );
-        //
-        // return $settings;
-        //
-    	// echo '<script type="text/javascript">
-    	// /* <![CDATA[ */
-    	// window.HIPE = '.json_encode($settings).';
-    	// /* ]]> */
-    	// </script>';
     }
-
-
 }
 
 $mpvc_scripts = new RegisterScripts();

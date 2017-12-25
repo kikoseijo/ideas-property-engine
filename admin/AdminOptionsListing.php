@@ -64,9 +64,27 @@ class AdminOptionsListing
         );
 
         add_settings_field(
+            'with_shared',
+            __('Show shared properties', IPE_KEY),
+            array( $this, 'with_shared_callback' ), // Callback
+            self::$PAGE,
+            self::$SECTION
+        );
+
+        add_settings_field(
             'page_id',
             __('Property details page', IPE_KEY),
             array( $this, 'page_id_callback' ), // Callback
+            self::$PAGE,
+            self::$SECTION
+        );
+
+
+
+        add_settings_field(
+            'search_provinces',
+            __('Provinces restriction', IPE_KEY),
+            array( $this, 'search_provinces_callback' ), // Callback
             self::$PAGE,
             self::$SECTION
         );
@@ -97,6 +115,10 @@ class AdminOptionsListing
     {
         $new_input = array();
 
+        if( isset( $input['search_provinces'] ) )
+            $new_input['search_provinces'] = sanitize_text_field( $input['search_provinces'] );
+        // if( isset( $input['with_shared'] ) )
+            $new_input['with_shared'] = ksoft_sanitize_checkbox($input['with_shared']);
         if( isset( $input['page_limit'] ) )
             $new_input['page_limit'] = absint( $input['page_limit'] );
         if( isset( $input['items_per_row'] ) )
@@ -113,6 +135,27 @@ class AdminOptionsListing
         echo __('Here you can configure how you want the listing page to be displayed.', IPE_KEY);
         echo '<br />&nbsp;<hr />';
 
+    }
+
+    function with_shared_callback()
+    {
+        ?>
+    	<input type="checkbox" name="mpvc_config_listing[with_shared]" value="1" <?php checked( '1', getMpvcOptions('with_shared') ); ?>
+    	<p class="description">
+    		Active will include shared listings in the results.
+    	</p>
+    	<?php
+    }
+
+    function search_provinces_callback()
+    {
+        ?>
+        <input type='text' name='mpvc_config_listing[search_provinces]' value='<?php echo getMpvcOptions('search_provinces');?>'>
+        <p class="description">
+    		Leave blank to search in all Provinces.<br />
+    		To restrict the results add provinces separated by a coma. ej: <code>MA,CA</code>.
+    	</p>
+        <?php
     }
 
     function page_limit_callback()

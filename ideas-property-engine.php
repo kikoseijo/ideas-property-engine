@@ -22,6 +22,9 @@ define('IPE_PROXY_URL', IPE_BASE_URL . 'proxi.php');
 require __DIR__ . '/vars/langs.php';
 require __DIR__ . '/vars/milenio.php';
 
+// Libs
+require __DIR__ . '/libs/helpers.php';
+
 // Plugin functionality
 require __DIR__ . '/scripts/filters.php';
 require __DIR__ . '/scripts/scripts.php';

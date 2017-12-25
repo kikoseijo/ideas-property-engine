@@ -28,6 +28,7 @@ function mpvc_listing($atts = [], $content = null, $tag = '')
     $o .= '<filters-horizontal tint-color="'.$mpvc_atts['color'].'" bg-color="'.$mpvc_atts['bg_color'].'"></filters-horizontal>';
     $o .= '<search-filters tint-color="'.$mpvc_atts['color'].'" bg-color="'.$mpvc_atts['bg_color'].'"></search-filters>';
     $o .= '<property-listing-loadmore';
+    $o .= ' bg-color="'.$mpvc_atts['bg_color'].'"';
     $o .= ' tint-color="'.$mpvc_atts['color'].'"';
     $o .= ' i-height="'.$mpvc_atts['img_height'].'"';
     $o .= ' i-width="'.$mpvc_atts['img_width'].'"';
