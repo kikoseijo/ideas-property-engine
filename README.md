@@ -1,6 +1,6 @@
 # Hipe Property Engine
 
-A wordpress plugin able to connect any wordpress Website with [Milenio Plus](http://milenioplus.com), a powerfull and online Real Estate CRM.
+A ***Wordpress plugin*** for ***Real Estate*** thats able to connect any wordpress Website with the [Milenio Plus](http://milenioplus.com) CRM, a powerfull and online Real Estate CRM.
 
 
 ## Installation
