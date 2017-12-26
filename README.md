@@ -5,7 +5,7 @@ A ***Wordpress plugin*** for ***Real Estate*** thats able to connect any wordpre
 
 ## Installation
 
-* Download plugin from [Direct link](#hhhh).
+* Download plugin from [Direct link](https://github.com/kikoseijo/ideas-property-engine/blob/master/zip/ideas-property-engine.zip?raw=true).
 * Install plugin and activate it.
 
 ## Configuration
