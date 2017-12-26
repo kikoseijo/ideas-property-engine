@@ -5,35 +5,30 @@ A wordpress plugin able to connect any wordpress Website with [Milenio Plus](htt
 
 ## Installation
 
-### 1
-Download plugin from [Direct link](#hhhh).
-
-### 2
-Install plugin and activate it.
+* Download plugin from [Direct link](#hhhh).
+* Install plugin and activate it.
 
 ## Configuration
 
-### 1
-Create a page in worpdress, will be the property search, add the following shortcode to the page content editor:
+First lets create a new page in worpdress to show the plugin, the Property Search Engine, add the following shortcode to the page content editor:
 
 ```
 [mpvc-listings]
 ```
 
-### 2
 Create the property details page with the following shortcode:
 
 ```
 [mpvc-detail]
 ```
 
-### 3
+### Configure the plugin
 Now its time to configure the plugin with your preferences, go back to the wordpress administration area, if plugin its correctly activated
 you will find a new menu on the left menu ***"Hipe Agent"***, this is where most of plugin configuration can be done, you should navigate
 trought the diferent configuration screens and setup your own.
 
-### 4
-Configure credentials, located in the ***"API Credentials"*** section, this is an important step and should be done right using the information provided
+### Configure API credentials
+The settings are located in the ***"API Credentials"*** section, this is an important step and should be done right using the information provided
 by Milenio Plus, this are your personal credentials, otherwise plugin will not work on your own website.
 
 ## Troubleshooting
@@ -41,7 +36,7 @@ Contact [DiseñoIdeas.com](http://disenoideas.com) for any enquires about gettin
 we will be pleased to help with any problems or enhancements you would like to have done.
 
 
-### Multi-language
+### Multi-language support
 Its posible to set diferent detail page for each language, for this you can include
 a special tag in the shortcode, will be diferent deppending on your Wordpress configuration and
 the translation plugins you are using.
