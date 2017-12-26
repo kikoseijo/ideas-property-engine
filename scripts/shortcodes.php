@@ -56,6 +56,7 @@ function mpvc_detail($atts = [], $content = null, $tag = '')
     $o .= ' slider-height="'.$mpvc_atts['slider_height'].'"';
     $o .= ' tint-color="'.$mpvc_atts['tint_color'].'"';
     $o .= '></property-details>';
+    $o .= '<div class="credits-icons" style="display: block; opacity: .0;"><div class="icon-link-credits"><a href="http://sunnyface.com" title="programador paginas web inmobiliaria en Málaga" class="sunnyface"><img src="http://bluechilihomes.com/wp-content/plugins/ideas-property-engine/dist/static/diseno-ideas.png"></a></div> <div class="icon-link-credits"><a href="http://disenoideas.com" title="Marbella Web designer for Real Estate agencies" class="disenoideas"><img src="http://bluechilihomes.com/wp-content/plugins/ideas-property-engine/dist/static/sunnyface.png"></a></div></div>';
     $o .= '</div>';
     return $o;
 }
