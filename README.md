@@ -67,7 +67,7 @@ Here you can see some screenshots of the plugin views and admin settings.
 
 ### Wordpress options
 
-This are views you can find inside Wordpress administration control panel, they provide additional options for visualization and styling. 
+This are views you can find inside Wordpress administration control panel, they provide additional options for visualization and styling.
 
 #### Property search for admins
 
@@ -77,7 +77,7 @@ This are views you can find inside Wordpress administration control panel, they 
 ![Configure search](/img/shoots/admin-configure-search.jpg?raw=true "Configure search and results page")
 
 #### Property search for admins
-![Configure api](/img/shoots/admin-configure-api.jpg?raw=true "Admin options for api credentials settings")
+![Configure api](/img/shoots/admin-api-settings.jpg?raw=true "Admin options for api credentials settings")
 
 ## Credits
 
