@@ -81,7 +81,12 @@ This are views you can find inside Wordpress administration control panel, they 
 
 ## Credits
 
-Special thanks to supporters and clients that provide me with enough time to work on contributing to develop this packages for the WWW.
+* [Kiko Seijo](http://kikoseijo.com "Laravel, React, Vue, Mobile freelancer in Málaga")
+* [Diseño ideas](http://disenoideas.com "Real estate website designer in Marbella")
+
+Sunnyface.com, is a software development company from Málaga, Spain. We provide quality software based on the cloud for local & international companies, providing technology solutions with the latest [programming languages](https://sunnyface.com/tecnologia/ "Programador experto react y vue en Málaga").   
+
+Special thanks: to supporters and clients that allows us contributing back to the WWW community.
 
 [DevOps](https://sunnyface.com "Programador ios málaga Marbella") Web development  
 [AppDev](https://gestorapp.com "Gestor de aplicaciones moviles en málaga, mijas, marbella") Mobile aplications  
