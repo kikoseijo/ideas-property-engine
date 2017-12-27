@@ -28,7 +28,7 @@ you will find a new menu on the left menu ***"Hipe Agent"***, this is where most
 trought the diferent configuration screens and setup your own.
 
 ### Configure API credentials
-The settings are located in the ***"API Credentials"*** section, this is an important step and should be done right using the information provided
+The settings are located in the "***API Credentials***" section, this is an important step and should be done right using the information provided
 by Milenio Plus, this are your personal credentials, otherwise plugin will not work on your own website.
 
 ## Troubleshooting
@@ -45,9 +45,39 @@ the translation plugins you are using.
 [mpvc-listings detail_page="/my-translated-details-page/?lang=en"]
 ```
 
+## Screenshots
 
+Here you can see some screenshots of the plugin views and admin settings.
 
+### Front page
 
+#### Customers search engine
+
+![Property search engine](/img/shoots/property-search-engine.jpg?raw=true "Property search engine on the front view")
+
+#### Property results view examples
+
+![Property results layout 1](/img/shoots/property-list-view-1.jpg?raw=true "Property list view 1 in results")
+![Property results layout 2](/img/shoots/property-list-view-2.jpg?raw=true "Property list view 2 in results")
+![Property results layout 3](/img/shoots/property-list-view-3.jpg?raw=true "Property list view 3 in results")
+
+#### Property detail view
+
+![Property detail view](/img/shoots/property-detail-view.jpg?raw=true "Property detail view")
+
+### Wordpress options
+
+This are views you can find inside Wordpress administration control panel, they provide additional options for visualization and styling. 
+
+#### Property search for admins
+
+![Admin property search](/img/shoots/admin-property-search.jpg?raw=true "Property search engine for the front")
+
+#### Admin options for search & results
+![Configure search](/img/shoots/admin-configure-search.jpg?raw=true "Configure search and results page")
+
+#### Property search for admins
+![Configure api](/img/shoots/admin-configure-api.jpg?raw=true "Admin options for api credentials settings")
 
 ## Credits
 
