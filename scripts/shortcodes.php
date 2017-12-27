@@ -27,6 +27,7 @@ function mpvc_listing($atts = [], $content = null, $tag = '')
     $o = '<div id="mpvc-app">';
     $o .= '<filters-horizontal tint-color="'.$mpvc_atts['color'].'" bg-color="'.$mpvc_atts['bg_color'].'"></filters-horizontal>';
     $o .= '<search-filters tint-color="'.$mpvc_atts['color'].'" bg-color="'.$mpvc_atts['bg_color'].'"></search-filters>';
+    $o .= '<div class="clearfix"></div>';
     $o .= '<property-listing-loadmore';
     $o .= ' bg-color="'.$mpvc_atts['bg_color'].'"';
     $o .= ' tint-color="'.$mpvc_atts['color'].'"';

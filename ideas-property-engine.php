@@ -7,12 +7,12 @@
  * Author URI:      http://disenoideas.com/contact/
  * Text Domain:     ideas-property-engine
  * Domain Path:     /languages
- * Version:         1.0.0
+ * Version:         1.0.1
  *
  * @package         ideas-property-engine
  */
 
-define('IPE_VERSION', '1.0.0');
+define('IPE_VERSION', '1.0.1');
 define('IPE_KEY', 'ideas-property-engine');
 define('IPE_BASE_URL', plugin_dir_url( __FILE__));
 // define('IPE_BASE_NAME', plugin_basename( __FILE__));
