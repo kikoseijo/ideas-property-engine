@@ -83,16 +83,21 @@ This are views you can find inside Wordpress administration control panel, they 
 
 ![Configure api](/img/shoots/admin-api-settings.jpg?raw=true 'Admin options for api credentials settings')
 
-### Changelog
+## Changelog
 
-* **v1.0.0** (15 February 2018)
+### **v1.0.2**
 
-- Added property reference to listings & property detail.
-- Added new price range search filter to the horizontal search component.
+* Added property reference to listings & property detail.
+* Added new price range search filter to the horizontal search component.
+* Fix read more button on single list view.
 
-* **v1.0.0** (14 December 2017)
+### **v1.0.1**
 
-- Initial plugin commit.
+* Fix chrome error.
+
+### **v1.0.0**
+
+* Initial release (Dec. 2017).
 
 ## Credits
 
