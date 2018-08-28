@@ -1,0 +1,905 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: HIPE Property Engine\n"
+"POT-Creation-Date: 2018-08-28 19:17+0200\n"
+"PO-Revision-Date: 2018-08-28 19:18+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.12\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: ideas-property-engine.php\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: admin/AdminOptionsApi.php:61
+msgid "API Credential configuration"
+msgstr "API Credential configuration"
+
+#: admin/AdminOptionsApi.php:68
+msgid "API user"
+msgstr "API user"
+
+#: admin/AdminOptionsApi.php:76
+msgid "API password"
+msgstr "Contraseña de API"
+
+#: admin/AdminOptionsApi.php:84
+msgid "API url"
+msgstr "API url"
+
+#: admin/AdminOptionsApi.php:92
+msgid "Api version"
+msgstr "Api version"
+
+#: admin/AdminOptionsApi.php:123
+msgid ""
+"You must configure the information here in order to connect the plugin with "
+"Milenio Plus API database.<br />API credentials are provided upon request "
+"from <a href=\"https://www.milenioplus.com?ref=mpvc-wordpress-plugin\" "
+"target=\"_blank\">Milenio Plus</a>."
+msgstr ""
+"You must configure the information here in order to connect the plugin with "
+"Milenio Plus API database.<br />API credentials are provided upon request "
+"from <a href=\"https://www.milenioplus.com?ref=mpvc-wordpress-plugin\" "
+"target=\"_blank\">Milenio Plus</a>."
+
+#: admin/AdminOptionsListing.php:61
+msgid "Property listing settings"
+msgstr "Property listing settings"
+
+#: admin/AdminOptionsListing.php:68
+msgid "Show shared properties"
+msgstr "Show shared properties"
+
+#: admin/AdminOptionsListing.php:76
+msgid "Property details page"
+msgstr "Property details page"
+
+#: admin/AdminOptionsListing.php:86
+msgid "Provinces restriction"
+msgstr "Provinces restriction"
+
+#: admin/AdminOptionsListing.php:94
+msgid "Properties per row"
+msgstr "Properties per row"
+
+#: admin/AdminOptionsListing.php:102
+msgid "Properties per page"
+msgstr "Inmuebles por pagina"
+
+#: admin/AdminOptionsListing.php:135
+msgid "Here you can configure how you want the listing page to be displayed."
+msgstr "Here you can configure how you want the listing page to be displayed."
+
+#: admin/AdminOptionsStyle.php:61
+msgid "Color styles configuration"
+msgstr "Color styles configuration"
+
+#: admin/AdminOptionsStyle.php:68
+msgid "Primary color"
+msgstr "Color principal"
+
+#: admin/AdminOptionsStyle.php:76
+msgid "Search-Box background"
+msgstr "Search-Box background"
+
+#: admin/AdminOptionsStyle.php:107
+msgid ""
+"Here you can change some global stylings for the plugin, extra "
+"configurations can be done upon request with a personalized version and "
+"unlimited posibilities, dont hesitate to contact us for a free quote."
+msgstr ""
+"Here you can change some global stylings for the plugin, extra "
+"configurations can be done upon request with a personalized version and "
+"unlimited posibilities, dont hesitate to contact us for a free quote."
+
+#: scripts/filters.php:5
+msgid "Settings"
+msgstr "Opciones"
+
+#: scripts/filters.php:6
+msgid "Configure API"
+msgstr "Configure API"
+
+#: scripts/scripts.php:91
+msgid "Properties for sale"
+msgstr "Inmuebles en venta"
+
+#: scripts/scripts.php:92
+msgid "Vacational rentals"
+msgstr "Vacational rentals"
+
+#: scripts/scripts.php:93
+msgid "Long term rentals"
+msgstr "Long term rentals"
+
+#: scripts/scripts.php:96
+msgid "Newest"
+msgstr "Más reciente"
+
+#: scripts/scripts.php:97
+msgid "Olders"
+msgstr "Olders"
+
+#: scripts/scripts.php:98
+msgid "Price (High to Low)"
+msgstr "Fiyat (pahalıdan ucuza)"
+
+#: scripts/scripts.php:99
+msgid "Price (Low to high)"
+msgstr "Precio (menor a mayor)"
+
+#: scripts/scripts.php:102
+msgid "Apartment"
+msgstr "Apartamento"
+
+#: scripts/scripts.php:103
+msgid "Country House / Finca"
+msgstr "Country House / Finca"
+
+#: scripts/scripts.php:104
+msgid "Penthouse"
+msgstr "Penthouse"
+
+#: scripts/scripts.php:105 scripts/scripts.php:192
+msgid "Plot"
+msgstr "Parcela"
+
+#: scripts/scripts.php:106
+msgid "Townhouse"
+msgstr "Casa de Ciudad"
+
+#: scripts/scripts.php:107
+msgid "Villa"
+msgstr "Villa"
+
+#: scripts/scripts.php:110
+msgid "Office"
+msgstr "Oficina"
+
+#: scripts/scripts.php:111
+msgid "Business"
+msgstr "Empresa"
+
+#: scripts/scripts.php:112
+msgid "Cafe"
+msgstr "Cafe"
+
+#: scripts/scripts.php:113
+msgid "Bar"
+msgstr "Barra"
+
+#: scripts/scripts.php:114
+msgid "Restaurant"
+msgstr "Restaurante"
+
+#: scripts/scripts.php:115
+msgid "Retail"
+msgstr "Precio de venta"
+
+#: scripts/scripts.php:116
+msgid "Shop"
+msgstr "Tienda"
+
+#: scripts/scripts.php:117
+msgid "Hotel"
+msgstr "Hotel"
+
+#: scripts/scripts.php:118
+msgid "Leisure Property"
+msgstr "Leisure Property"
+
+#: scripts/scripts.php:119
+msgid "Industrial Property"
+msgstr "Industrial Property"
+
+#: scripts/scripts.php:120
+msgid "Warehouse"
+msgstr "Almacén"
+
+#: scripts/scripts.php:121
+msgid "Landv"
+msgstr "Landv"
+
+#: scripts/scripts.php:122
+msgid "Development"
+msgstr "Desarrollo"
+
+#: scripts/scripts.php:125
+msgid "East"
+msgstr "Este"
+
+#: scripts/scripts.php:126
+msgid "North"
+msgstr "Norte"
+
+#: scripts/scripts.php:127
+msgid "NorthEast"
+msgstr "NorthEast"
+
+#: scripts/scripts.php:128
+msgid "North West"
+msgstr "Noroeste"
+
+#: scripts/scripts.php:129
+msgid "South"
+msgstr "Sur"
+
+#: scripts/scripts.php:130
+msgid "South East"
+msgstr "South East"
+
+#: scripts/scripts.php:131
+msgid "SouthWest"
+msgstr "SouthWest"
+
+#: scripts/scripts.php:132
+msgid "West"
+msgstr "Oeste"
+
+#: scripts/scripts.php:135
+msgid "24 Hour Security"
+msgstr "24 Hour Security"
+
+#: scripts/scripts.php:136
+msgid "Air Conditioning"
+msgstr "Aire acondicionado"
+
+#: scripts/scripts.php:137
+msgid "Alarm System"
+msgstr "Alarm System"
+
+#: scripts/scripts.php:138
+msgid "Beachside"
+msgstr "Beachside"
+
+#: scripts/scripts.php:139
+msgid "Close to Park"
+msgstr "Close to Park"
+
+#: scripts/scripts.php:140
+msgid "Close to Schools"
+msgstr "Close to Schools"
+
+#: scripts/scripts.php:141
+msgid "Double Glazing"
+msgstr "Double Glazing"
+
+#: scripts/scripts.php:142
+msgid "Fireplace"
+msgstr "Chimenea"
+
+#: scripts/scripts.php:143
+msgid "Frontline Beach"
+msgstr "Frontline Beach"
+
+#: scripts/scripts.php:144
+msgid "Frontline Golf"
+msgstr "Frontline Golf"
+
+#: scripts/scripts.php:145
+msgid "Gated Complex"
+msgstr "Gated Complex"
+
+#: scripts/scripts.php:146
+msgid "Heated Swimming Pool"
+msgstr "Heated Swimming Pool"
+
+#: scripts/scripts.php:147
+msgid "Heating"
+msgstr "Calefaccion"
+
+#: scripts/scripts.php:148
+msgid "Lift"
+msgstr "Ascensor"
+
+#: scripts/scripts.php:149
+msgid "Modern Style"
+msgstr "Estilo moderno"
+
+#: scripts/scripts.php:150
+msgid "Mountain Views"
+msgstr "Mountain Views"
+
+#: scripts/scripts.php:151
+msgid "Newly Built. Property never lived in."
+msgstr "Newly Built. Property never lived in."
+
+#: scripts/scripts.php:152
+msgid "Park Views"
+msgstr "Park Views"
+
+#: scripts/scripts.php:153
+msgid "Pool Views"
+msgstr "Pool Views"
+
+#: scripts/scripts.php:154
+msgid "Private Garden"
+msgstr "Private Garden"
+
+#: scripts/scripts.php:155
+msgid "Renovation Required"
+msgstr "Renovation Required"
+
+#: scripts/scripts.php:156
+msgid "Rustic Style"
+msgstr "Rustic Style"
+
+#: scripts/scripts.php:157
+msgid "Sauna"
+msgstr "Sauna"
+
+#: scripts/scripts.php:158
+msgid "Sea Views"
+msgstr "Sea Views"
+
+#: scripts/scripts.php:159
+msgid "Solar Power"
+msgstr "Solar Power"
+
+#: scripts/scripts.php:160
+msgid "Storage Room"
+msgstr "Storage Room"
+
+#: scripts/scripts.php:161
+msgid "Swimming Pool"
+msgstr "Swimming Pool"
+
+#: scripts/scripts.php:162
+msgid "Tennis and/or Paddle Court"
+msgstr "Tennis and/or Paddle Court"
+
+#: scripts/scripts.php:163
+msgid "Underfloor Heating"
+msgstr "Underfloor Heating"
+
+#: scripts/scripts.php:164
+msgid "Golf views"
+msgstr "Golf views"
+
+#: scripts/scripts.php:165
+msgid "Gimnasium"
+msgstr "Gimnasium"
+
+#: scripts/scripts.php:166
+msgid "Walking Distance to Amenities"
+msgstr "Walking Distance to Amenities"
+
+#: scripts/scripts.php:167
+msgid "Walking Distance to the Beach"
+msgstr "Walking Distance to the Beach"
+
+#: scripts/scripts.php:172
+msgid "%property_type% in %city% %sale_type%"
+msgstr "%property_type% in %city% %sale_type%"
+
+#: scripts/scripts.php:173
+msgid ""
+"Viewing <strong>%viewing%</strong> properties, out of <strong>%total%</"
+"strong> properties found."
+msgstr ""
+"Viewing <strong>%viewing%</strong> properties, out of <strong>%total%</"
+"strong> properties found."
+
+#: scripts/scripts.php:174
+msgid "Loading properties from caché"
+msgstr "Loading properties from caché"
+
+#: scripts/scripts.php:175
+msgid "High"
+msgstr "Alta"
+
+#: scripts/scripts.php:176
+msgid "Low"
+msgstr "Baja"
+
+#: scripts/scripts.php:177
+msgid "for sale"
+msgstr "en venta"
+
+#: scripts/scripts.php:178
+msgid "for rent"
+msgstr "en alquiler"
+
+#: scripts/scripts.php:179
+msgid "€"
+msgstr "€"
+
+#: scripts/scripts.php:180
+msgid "Search by location"
+msgstr "Buscar por ubicación"
+
+#: scripts/scripts.php:181
+msgid "start typing..."
+msgstr "start typing..."
+
+#: scripts/scripts.php:182
+msgid "Listing type"
+msgstr "Tipo de listado"
+
+#: scripts/scripts.php:183
+msgid "Select type"
+msgstr "Seleccione el tipo"
+
+#: scripts/scripts.php:184
+msgid "Property type"
+msgstr "Tipo de propiedad"
+
+#: scripts/scripts.php:185
+msgid "Select property type"
+msgstr "Select property type"
+
+#: scripts/scripts.php:186
+msgid "N. Bedrooms"
+msgstr "N. Bedrooms"
+
+#: scripts/scripts.php:187
+msgid "Beds"
+msgstr "Habitaciones"
+
+#: scripts/scripts.php:188
+msgid "N. Bathrooms"
+msgstr "N. Bathrooms"
+
+#: scripts/scripts.php:189
+msgid "Baths"
+msgstr "Baños"
+
+#: scripts/scripts.php:190
+msgid "Sleeps"
+msgstr "Sleeps"
+
+#: scripts/scripts.php:191
+msgid "Plot size"
+msgstr "Plot size"
+
+#: scripts/scripts.php:193
+msgid "Build size"
+msgstr "Build size"
+
+#: scripts/scripts.php:194
+msgid "Build"
+msgstr "Construido"
+
+#: scripts/scripts.php:195
+msgid "Property descriptions"
+msgstr "Descripción del inmueble"
+
+#: scripts/scripts.php:196
+msgid "Property description"
+msgstr "Descripción del inmueble"
+
+#: scripts/scripts.php:197
+msgid "Property features"
+msgstr "Caracteristicas de la propiedad"
+
+#: scripts/scripts.php:198
+msgid "Sort by"
+msgstr "Ordenar por"
+
+#: scripts/scripts.php:199
+msgid "read more"
+msgstr "leer más"
+
+#: scripts/scripts.php:200
+msgid "Load more properties"
+msgstr "Cargar más propiedades"
+
+#: scripts/scripts.php:201
+msgid "Updating to the latest properties, please wait...."
+msgstr "Updating to the latest properties, please wait...."
+
+#: scripts/scripts.php:202
+msgid "Loading property details, please wait...."
+msgstr "Loading property details, please wait...."
+
+#: scripts/scripts.php:203
+msgid "Property ID error"
+msgstr "Property ID error"
+
+#: scripts/scripts.php:204
+msgid ""
+"Sorry this property could have been deleted, contact us if you think this is "
+"an error."
+msgstr ""
+"Sorry this property could have been deleted, contact us if you think this is "
+"an error."
+
+#: scripts/scripts.php:205
+msgid "API - Connection ERROR"
+msgstr "API - Connection ERROR"
+
+#: scripts/scripts.php:206
+msgid "Additional information"
+msgstr "Información adicional"
+
+#: scripts/scripts.php:207
+msgid "Price"
+msgstr "Precio"
+
+#: scripts/scripts.php:208
+msgid "Property reference"
+msgstr "Referencia de la propiedad"
+
+#: scripts/scripts.php:209
+msgid "Property for sale"
+msgstr "Propiedad en venta"
+
+#: scripts/scripts.php:210
+msgid "Property available for Long term rental"
+msgstr "Property available for Long term rental"
+
+#: scripts/scripts.php:211
+msgid "Property available for Short term rental"
+msgstr "Property available for Short term rental"
+
+#: scripts/scripts.php:212
+msgid "Number of bedrooms"
+msgstr "Number of bedrooms"
+
+#: scripts/scripts.php:213
+msgid "Number of sleeps"
+msgstr "Number of sleeps"
+
+#: scripts/scripts.php:214
+msgid "Number of bathrooms"
+msgstr "Número de baños"
+
+#: scripts/scripts.php:215
+msgid "Energy rating"
+msgstr "Energy rating"
+
+#: scripts/scripts.php:216
+msgid "Floor number"
+msgstr "Floor number"
+
+#: scripts/scripts.php:217
+msgid "Property location"
+msgstr "Localización de la propiedad"
+
+#: scripts/scripts.php:218
+msgid "Location"
+msgstr "Ubicación"
+
+#: scripts/scripts.php:219
+msgid "Property orientation"
+msgstr "Property orientation"
+
+#: scripts/scripts.php:220
+msgid "Parking spaces"
+msgstr "Parking spaces"
+
+#: scripts/scripts.php:221
+msgid "Build size in square meters"
+msgstr "Build size in square meters"
+
+#: scripts/scripts.php:222
+msgid "Plot size in square meters"
+msgstr "Plot size in square meters"
+
+#: scripts/scripts.php:223
+msgid "Terraze size in square meters"
+msgstr "Terraze size in square meters"
+
+#: scripts/scripts.php:224
+msgid "Last updated"
+msgstr "Última actualización"
+
+#: scripts/scripts.php:225
+msgid "Updated"
+msgstr "Actualizado"
+
+#: scripts/shortcodes.php:8
+msgid ""
+"HIPE - ERROR:<br />The plugin its not configured right, the <b>detail page "
+"ID</b> its not setup.<br />Enter your Wordpress control panel, go to "
+"<b>Settings > HIPE Agent > Configure search</b>.<br />Configure there where "
+"to send users when they want to see the property details page."
+msgstr ""
+"HIPE - ERROR:<br />The plugin its not configured right, the <b>detail page "
+"ID</b> its not setup.<br />Enter your Wordpress control panel, go to "
+"<b>Settings > HIPE Agent > Configure search</b>.<br />Configure there where "
+"to send users when they want to see the property details page."
+
+#: vars/milenio.php:4
+msgid "A Coruña"
+msgstr "A Coruña"
+
+#: vars/milenio.php:5
+msgid "Álava"
+msgstr "Álava"
+
+#: vars/milenio.php:6
+msgid "Albacete"
+msgstr "Albacete"
+
+#: vars/milenio.php:7
+msgid "Alicante"
+msgstr "Alicante"
+
+#: vars/milenio.php:8
+msgid "Almería"
+msgstr "Almería"
+
+#: vars/milenio.php:9
+msgid "Asturias"
+msgstr "Asturias"
+
+#: vars/milenio.php:10
+msgid "Ávila"
+msgstr "Ávila"
+
+#: vars/milenio.php:11
+msgid "Badajoz"
+msgstr "Badajoz"
+
+#: vars/milenio.php:12
+msgid "Balears"
+msgstr "Baleares"
+
+#: vars/milenio.php:13
+msgid "Barcelona"
+msgstr "Barcelona"
+
+#: vars/milenio.php:14
+msgid "Burgos"
+msgstr "Burgos"
+
+#: vars/milenio.php:15
+msgid "Cáceres"
+msgstr "Cáceres"
+
+#: vars/milenio.php:16
+msgid "Cádiz"
+msgstr "Cádiz"
+
+#: vars/milenio.php:17
+msgid "Cantabria"
+msgstr "Cantabria"
+
+#: vars/milenio.php:18
+msgid "Castellón"
+msgstr "Castellón"
+
+#: vars/milenio.php:19
+msgid "Ceuta, Melilla"
+msgstr "Ceuta, Melilla"
+
+#: vars/milenio.php:20
+msgid "Ciudad Real"
+msgstr "Ciudad Real"
+
+#: vars/milenio.php:21
+msgid "Córdoba"
+msgstr "Córdoba"
+
+#: vars/milenio.php:22
+msgid "Cuenca"
+msgstr "Cuenca"
+
+#: vars/milenio.php:23
+msgid "Girona"
+msgstr "Gerona"
+
+#: vars/milenio.php:24
+msgid "Granada"
+msgstr "Granada"
+
+#: vars/milenio.php:25
+msgid "Guadalajara"
+msgstr "Guadalajara"
+
+#: vars/milenio.php:26
+msgid "Guipúzcoa"
+msgstr "Guipúzcoa"
+
+#: vars/milenio.php:27
+msgid "Huelva"
+msgstr "Huelva"
+
+#: vars/milenio.php:28
+msgid "Huesca"
+msgstr "Huesca"
+
+#: vars/milenio.php:29
+msgid "Jaén"
+msgstr "Jaén"
+
+#: vars/milenio.php:30
+msgid "La Rioja"
+msgstr "La Rioja"
+
+#: vars/milenio.php:31
+msgid "Las Palmas"
+msgstr "Las Palmas"
+
+#: vars/milenio.php:32
+msgid "León"
+msgstr "León"
+
+#: vars/milenio.php:33
+msgid "Lleida"
+msgstr "Lérida"
+
+#: vars/milenio.php:34
+msgid "Lugo"
+msgstr "Lugo"
+
+#: vars/milenio.php:35
+msgid "Madrid"
+msgstr "Madrid"
+
+#: vars/milenio.php:36
+msgid "Málaga"
+msgstr "Málaga"
+
+#: vars/milenio.php:37
+msgid "Murcia"
+msgstr "Murcia"
+
+#: vars/milenio.php:38
+msgid "Navarra"
+msgstr "Navarra"
+
+#: vars/milenio.php:39
+msgid "Ourense"
+msgstr "Ourense"
+
+#: vars/milenio.php:40
+msgid "Palencia"
+msgstr "Palencia"
+
+#: vars/milenio.php:41
+msgid "Pontevedra"
+msgstr "Pontevedra"
+
+#: vars/milenio.php:42
+msgid "Salamanca"
+msgstr "Salamanca"
+
+#: vars/milenio.php:43
+msgid "Santa Cruz de Tenerife"
+msgstr "Santa Cruz de Tenerife"
+
+#: vars/milenio.php:44
+msgid "Segovia"
+msgstr "Segovia"
+
+#: vars/milenio.php:45
+msgid "Sevilla"
+msgstr "Sevilla"
+
+#: vars/milenio.php:46
+msgid "Soria"
+msgstr "Soria"
+
+#: vars/milenio.php:47
+msgid "Tarragona"
+msgstr "Tarragona"
+
+#: vars/milenio.php:48
+msgid "Teruel"
+msgstr "Teruel"
+
+#: vars/milenio.php:49
+msgid "Toledo"
+msgstr "Toledo"
+
+#: vars/milenio.php:50
+msgid "Valencia"
+msgstr "Valencia"
+
+#: vars/milenio.php:51
+msgid "Valladolid"
+msgstr "Valladolid"
+
+#: vars/milenio.php:52
+msgid "Vizcaya"
+msgstr "Vizcaya"
+
+#: vars/milenio.php:53
+msgid "Zamora"
+msgstr "Zamora"
+
+#: vars/milenio.php:54
+msgid "Zaragoza"
+msgstr "Zaragoza"
+
+#: vars/milenio.php:59
+msgid "Arabic"
+msgstr "Árabe"
+
+#: vars/milenio.php:60
+msgid "Danish"
+msgstr "Danés"
+
+#: vars/milenio.php:61
+msgid "Dutch"
+msgstr "Holandés"
+
+#: vars/milenio.php:62
+msgid "English"
+msgstr "Inglés"
+
+#: vars/milenio.php:63
+msgid "Estonian"
+msgstr "Estonio"
+
+#: vars/milenio.php:64
+msgid "Finnish"
+msgstr "Finlandés"
+
+#: vars/milenio.php:65
+msgid "French"
+msgstr "Francés"
+
+#: vars/milenio.php:66
+msgid "German"
+msgstr "Alemán"
+
+#: vars/milenio.php:67
+msgid "Hungarian"
+msgstr "Florín húngaro"
+
+#: vars/milenio.php:68
+msgid "Italian"
+msgstr "Italiano"
+
+#: vars/milenio.php:69
+msgid "Lithuanian"
+msgstr "Lituano"
+
+#: vars/milenio.php:70
+msgid "Norwegian"
+msgstr "Noruego"
+
+#: vars/milenio.php:71
+msgid "Polish"
+msgstr "Polaco"
+
+#: vars/milenio.php:72
+msgid "Portuguese"
+msgstr "Portugués"
+
+#: vars/milenio.php:73
+msgid "Russian"
+msgstr "Federación Rusa"
+
+#: vars/milenio.php:74
+msgid "Spanish"
+msgstr "Español"
+
+#: vars/milenio.php:75
+msgid "Swedish"
+msgstr "Corona sueca"
+
+#. Plugin Name of the plugin/theme
+msgid "HIPE Property Engine"
+msgstr "HIPE Property Engine"
+
+#. Plugin URI of the plugin/theme
+msgid "BlueChillyHomes.com"
+msgstr "BlueChillyHomes.com"
+
+#. Description of the plugin/theme
+msgid ""
+"Plugin for connecting Wordpress with Milenio Plus Marbella property engine."
+msgstr ""
+"Plugin for connecting Wordpress with Milenio Plus Marbella property engine."
+
+#. Author of the plugin/theme
+msgid "Diseño Ideas"
+msgstr "Diseño Ideas"
+
+#. Author URI of the plugin/theme
+msgid "http://disenoideas.com/contact/"
+msgstr "http://disenoideas.com/contact/"
